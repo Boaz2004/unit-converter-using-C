@@ -1,0 +1,633 @@
+#include<stdio.h>
+ #include<string.h>
+ #include<ctype.h>
+ //function for length convertor
+ void length(){
+ printf("LENGTH CONVERTOR\n");
+ printf("---------------\n");
+ float m1;
+ char n1[50],n2[50];
+ printf("1.nanometer\n");
+ printf("2.micrometer\n");
+ printf("3.millimeter\n");
+ printf("4.centimeter\n");
+ printf("5.meter\n");
+ printf("6.kilometer\n");
+ printf("7.feet\n");
+ printf("8.yard\n");
+ printf("9.inch\n");
+ printf("enter the input unit:");
+ scanf("%s",&n1);
+strlwr(n1);
+ printf("enter the input value:");
+ scanf("%f",&m1);
+ printf("enter the unit to be converted:");
+ scanf("%s",&n2);
+ strlwr(n2);
+ if(strcmp(n1,n2)==0){
+ printf("both the units are same");}
+ else if(strcmp(n1,"kilometer")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("kilometer:%.2f\nnanometer:%lf",m1,m1*1000000000000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("kilomter:%.2f\nmicrometer:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("kilometer:%.2f\nmillimeter:%lf",m1,m1*1000000.0);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("kilometeer:%.2f\ncentimeter:%lf",m1,m1*100000.0);
+ else if(strcmp(n2,"meter")==0)
+ printf("kilometer:%.2f\nmeter:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"feet")==0)
+ printf("kilometer:%.2f\nfeet:%lf",m1,m1*3280.83989501);
+ else if(strcmp(n2,"yard")==0)
+ printf("kilometer:%.2f\nyard:%lf",m1,m1*1093.61329834);
+else if(strcmp(n2,"inch")==0)
+ printf("kilometer:%.2f\ninch:%lf",m1,m1*1093.61329834);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"meter")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("meter:%.2f\nnanometer:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("meter:%.2f\nmicrometer:%lf",m1,m1*1000000.0);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("meter:%.2f\nmillimeter:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("meter:%.2f\ncentimeter:%lf",m1,m1*100.0);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("meter:%.2f\nkilometer:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"feet")==0)
+ printf("meter:%.2f\nfeet:%lf",m1,m1*3.28083990);
+ else if(strcmp(n2,"yard")==0)
+ printf("meter:%..2f\nyard:%lf",m1,m1*1.09361330);
+ else if(strcmp(n2,"inch")==0)
+ printf("meter:%.2f\ninch:%lf",m1,m1*39.37007874);
+ else
+printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"millimeter")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("millimeter:%.2f\nnanometer:%lf",m1,m1*1000000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("millimeter:%.2f\nmicrometer:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("millimeter:%.2f\ncentimeter:%lf",m1,m1*0.1);
+ else if(strcmp(n2,"meter")==0)
+ printf("millimeter:%.2f\nmeter:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("millimeter:%.2f\nkilometer:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"feet")==0)
+ printf("millimeter:%.2f\nfeet:%lf",m1,m1*0.00328084);
+ else if(strcmp(n2,"yard")==0)
+ printf("millimeter:%.2f\nyard:%lf",m1,m1*0.00109361);
+ else if(strcmp(n2,"inch")==0)
+ printf("millimeter:%.2f\ninch:%lf",m1,m1*0.03937008);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"centimeter")==0){
+if(strcmp(n2,"nanometer")==0)
+ printf("centimeter:%.2f\nanometer:%lf",m1,m1*10000000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("centimeter:%.2f\nmicrometer:%lf",m1,m1*10000);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("centimeter:%.2f\nmillimeter:%lf",m1,m1*10);
+ else if(strcmp(n2,"meter")==0)
+ printf("centimeter:%.2f\nmeter:%lf",m1,m1*0.01);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("centimeter:%.2f\nkilometer:%lf",m1,m1*0.00001);
+ else if(strcmp(n2,"yard")==0)
+ printf("centimeter:%.2f\nyard:%lf",m1,m1*0.01093613);
+ else if(strcmp(n2,"feet")==0)
+ printf("centimeter:%.2f\nfeet:%lf",m1,m1*0.03280840);
+ else if(strcmp(n2,"inch")==0)
+ printf("centimeter:%.2f\ninch:%lf",m1,m1*0.39370079);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"nanometer")==0){
+ if(strcmp(n2,"micrometer")==0)
+ printf("nanometer:%.2f\nmicrometer:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"millimeter")==0)
+printf("nanometer:%.2f\nmillimeter:%lf",m1,m1* 0.000001);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("nanometer:%.2f\ncentimeter:%lf",m1,m1*0.0000001);
+ else if(strcmp(n2,"meter")==0)
+ printf("nanometer:%.2f\nmeter:%lf",m1,m1*0.000000001);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("nanometer:%.2f\nkilometer:%lf",m1,m1*0.000000000001);
+ else if(strcmp(n2,"feet")==0)
+ printf("nanometer:%.2f\nfeet:%lf",m1,m1*0.00000000328084);
+ else if(strcmp(n2,"yard")==0)
+ printf("nanometer:%.2f\nyard:%lf",m1,m1*0.00000000109361);
+ else if(strcmp(n2,"inch")==0)
+ printf("nanometer:%.2f\ninch:%lf",m1,m1*0.00000003937008);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"micrometer")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("micrometer:%.2f\nnanometer:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("micrometer:%.2f\nmillimeter:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("micrometer:%.2f\ncentimeter:%lf",m1,m1*0.0001);
+else if(strcmp(n2,"meter")==0)
+ printf("micrometer:%.2f\nmeter:%lf",m1,m1*0.000001);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("micrometer:%.2f\nkilometer:%lf",m1,m1*0.000000001);
+ else if(strcmp(n2,"feet")==0)
+ printf("micrometer:%.2f\nfeet:%lf",m1,m1*0.0000032808);
+ else if(strcmp(n2,"yard")==0)
+ printf("micrometer:%.2f\nyard:%lf",m1,m1*0.0000010936);
+ else if(strcmp(n2,"inch")==0)
+ printf("micrometer:%.2f\ninch:%lf",m1,m1*0.00003937);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"yard")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("yard:%.2f\nnanometer:%lf",m1,m1*914400000);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("yard:%.2f\nmicrometer:%lf",m1,m1*914400);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("yard:%.2f\nmillimeter:%lf",m1,m1*914.4);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("yard:%.2f\ncentimeter:%lf",m1,m1*91.44);
+ else if(strcmp(n2,"meter")==0)
+printf("yard:%.2f\nmeter:%lf",m1,m1*0.9144);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("yard:%.2f\nkilometer:%lf",m1,m1*0.000914);
+ else if(strcmp(n2,"feet")==0)
+ printf("yard:%.2f\nfeet:%lf",m1,m1*3.0);
+ else if(strcmp(n2,"inch")==0)
+ printf("yard:%.2f\ninch:%lf",m1,m1*36.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"feet")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("feet:%.2f\nnanometer:%lf",m1,m1*304800000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("feet:%.2f\nmicrometer:%lf",m1,m1*304800.0);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("feet:%.2f\nmillimeter:%lf",m1,m1*304.8);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("feet:%.2f\ncentimeter:%lf",m1,m1*30.48);
+ else if(strcmp(n2,"meter")==0)
+ printf("feet:%.2f\nmeter:%lf",m1,m1*0.3048);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("feet:%.2f\nkilometer:%lf",m1,m1*0.0003048);
+else if(strcmp(n2,"yard")==0)
+ printf("feet:%.2f\nyard:%lf",m1,m1*0.33333333333333);
+ else if(strcmp(n2,"inch")==0)
+ printf("foot:%.2f\ninch:%lf",m1,m1*12.00000000000000);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"inch")==0){
+ if(strcmp(n2,"nanometer")==0)
+ printf("inch:%.2f\nnanometer:%lf",m1,m1*25400000.0);
+ else if(strcmp(n2,"micrometer")==0)
+ printf("inch:%.2f\nmicrometer:%lf",m1,m1*25400.0);
+ else if(strcmp(n2,"millimeter")==0)
+ printf("inch:%.2f\nmillimeter:%lf",m1,m1*25.4);
+ else if(strcmp(n2,"centimeter")==0)
+ printf("inch:%.2f\ncentimeter:%lf",m1,m1*2.54);
+ else if(strcmp(n2,"meter")==0)
+ printf("inch:%.2f\nmeter:%lf",m1,m1*0.0254);
+ else if(strcmp(n2,"kilometer")==0)
+ printf("inch:%.2f\nkilometer:%lf",m1,m1*0.0000254);
+ else if(strcmp(n2,"yard")==0)
+ printf("inch:%.2f\nyard:%lf",m1,m1*0.02777777777778);
+ else if(strcmp(n2,"feet")==0)
+printf("inch:%.2f\nfeet:%lf",m1,m1*0.08333333333333);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else
+ }
+ printf("enter the unit corrrectly");
+ //function for temperature convertor
+ void temp(){
+ printf("TEMPERATURE CONVERTOR\n");
+ printf("---------------\n");
+ float m1;
+ char n1[50],n2[50];
+ printf("1.celsius");
+ printf("\n2.fahrenheit");
+ printf("\n3.kelvin");
+ printf("\n4.rakine");
+ printf("\n5.reaumur\n");
+ printf("enter the input unit:");
+ scanf("%s",&n1);
+ strlwr(n1);
+ printf("enter the input temperature:");
+ scanf("%f",&m1);
+printf("enter the unit to be converted:");
+ scanf("%s",&n2);
+ strlwr(n2);
+ if(strcmp(n1,n2)==0){
+ printf("both the units are same");}
+ else if(strcmp(n1,"celsius")==0){
+ if(strcmp(n2,"fahrenheit")==0)
+ printf("celsius:%.2f\nfahrenheit:%lf",m1,(m1*9/5)+32);
+ else if(strcmp(n2,"kelvin")==0)
+ printf("celsius:%.2f\nkelvin:%lf",m1,m1+273.15);
+ else if(strcmp(n2,"rakine")==0)
+ printf("celsius:%.2f\nrakine:%lf",m1,(m1+273.15)*9/5);
+ else if(strcmp(n2,"reaumur")==0)
+ printf("celsius:%.2f\nreaumur:%lf",m1,m1*4/5);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"fahrenheit")==0){
+ if(strcmp(n2,"celsius")==0)
+ printf("fahrenheit:%.2f\ncelsius:%lf",m1,(m1-32)*5/9);
+ else if(strcmp(n2,"kelvin")==0)
+ printf("fahrenheit:%.2f\nkelvin:%lf",m1,(m1+459.67)*5/9);
+ else if(strcmp(n2,"rakine")==0)
+printf("fahrenheit:%.2f\nrakine:%lf",m1,m1+459.67);
+ else if(strcmp(n2,"reaumur")==0)
+ printf("fahrenheit:%.2f\nreaumur:%lf",m1,(m1-32)*4/9);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"kelvin")==0){
+ if(strcmp(n2,"celsius")==0)
+ printf("kelvin:%.2f\ncelsius:%lf",m1,(m1-273.15));
+ else if(strcmp(n2,"fahrenheit")==0)
+ printf("kelvin:%.2f\nfahrenheit:%lf",m1,(m1*9/5)-459.67);
+ else if(strcmp(n2,"rakine")==0)
+ printf("kelvin:%.2f\nrakine:%lf",m1,m1*9/5);
+ else if(strcmp(n2,"reaumur")==0)
+ printf("kelvin:%.2f\nreaumur:%lf",m1,(m1-273.15)*4/5);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"rakine")==0){
+ if(strcmp(n2,"celsius")==0)
+ printf("rakine:%.2f\ncelsius:%lf",m1,(m1-491.67)*5/9);
+ else if(strcmp(n2,"fahrenheit")==0)
+ printf("rakine:%.2f\nfahrenheit:%lf",m1,m1-459.67);
+else if(strcmp(n2,"kelvin")==0)
+ printf("rakine:%.2f\nkelvin:%lf",m1,m1*5/9);
+ else if(strcmp(n2,"reaumur")==0)
+ printf("rakine:%.2f\nreaumur:%lf",m1,(m1-491.67)*4/9);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"reaumur")==0){
+ if(strcmp(n2,"celsius")==0)
+ printf("reaumur:%.2f\ncelsius:%lf",m1,m1*5/4);
+ else if(strcmp(n2,"fahrenheit")==0)
+ printf("reaumur%.2f\nfahrenheit:%lf",m1,(m1*9/4)+32);
+ else if(strcmp(n2,"kelvin")==0)
+ printf("reaumur%.2f\nkelvin:%lf",m1,m1*5/4+273.15);
+ else if(strcmp(n2,"rakine")==0)
+ printf("reaumur%.2f\nrakine:%lf",m1, (m1*9/4)+491.67);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else
+ }
+ printf("enter the unit corrrectly");
+//function for mass convertor
+ void mass(){
+ printf("MASS CONVERTOR\n");
+ printf("---------------\n");
+ float m1;
+ char n1[50],n2[50];
+ printf("1.tonne\n");
+ printf("2.kilogram\n");
+ printf("3.gram\n");
+ printf("4.millligram\n");
+ printf("5.microgram\n");
+ printf("6.quintal\n");
+ printf("7.pound\n");
+ printf("8.ounze\n");
+ printf("9.carat\n");
+ printf("enter the input unit:");
+ scanf("%s",&n1);
+ strlwr(n1);
+ printf("enter the input value:");
+ scanf("%f",&m1);
+ printf("enter the unit to be converted:");
+ scanf("%s",&n2);
+ strlwr(n2);
+if(strcmp(n1,n2)==0){
+ printf("both the units are same");}
+ else if(strcmp(n1,"tonne")==0){
+ if(strcmp(n2,"kilogram")==0)
+ printf("tonne:%f\nkilogram:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"gram")==0)
+ printf("tonne:%f\ngram:%lf",m1,m1*1000000);
+ else if(strcmp(n2,"milligram")==0)
+ printf("tonne:%f\nmilligram:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"microgram")==0)
+ printf("tonne:%f\nmicrogram:%lf",m1,m1* 1000000000000.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("tonne:%f\nquintal:%lf",m1,m1*10.0);
+ else if(strcmp(n2,"pound")==0)
+ printf("tonne:%f\npound:%lf",m1,m1*2204.62);
+ else if(strcmp(n2,"ounze")==0)
+ printf("tonne:%f\nounze:%lf",m1,m1*35273.96);
+ else if(strcmp(n2,"carat")==0)
+ printf("tonne:%f\ncarat:%lf",m1,m1*5000000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"kilogram")==0){
+if(strcmp(n2,"tonne")==0)
+ printf("kilogram:%f\ntonne:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"gram")==0)
+ printf("kilogram:%f\ngram:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"milligram")==0)
+ printf("kilogram:%f\nmilligram:%lf",m1,m1*1000000.0);
+ else if(strcmp(n2,"microgram")==0)
+ printf("kilogram:%f\nmicrogram:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("kilogram:%f\nquintal:%lf",m1,m1*0.01);
+ else if(strcmp(n2,"pound")==0)
+ printf("kilogram:%f\npound:%lf",m1,m1*2.204622621);
+ else if(strcmp(n2,"ounze")==0)
+ printf("kilogram:%f\nounze:%lf",m1,m1*35.27396);
+ else if(strcmp(n2,"carat")==0)
+ printf("kilogram:%f\ncarat:%lf",m1,m1*5000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"gram")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("gram:%f\ntonne",m1,m1*0.000001);
+ else if(strcmp(n2,"kilogram")==0)
+printf("gram:%f\nkilogram",m1,m1*0.001);
+ else if(strcmp(n2,"milligram")==0)
+ printf("gram:%f\nmilligram",m1,m1*1000.0);
+ else if(strcmp(n2,"microgram")==0)
+ printf("gram:%f\nmicrogram",m1,m1*1000000.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("gram:%f\nquintal",m1,m1*0.00001);
+ else if(strcmp(n2,"pound")==0)
+ printf("gram:%f\npound",m1,m1*0.002204622);
+ else if(strcmp(n2,"ounze")==0)
+ printf("gram:%f\nounze",m1,m1*0.03527396);
+ else if(strcmp(n2,"carat")==0)
+ printf("gram:%f\ncarat",m1,m1*5.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n2,"milligram")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("milligram:%f\ntonne:%lf",m1,m1*0.000000001);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("milligram:%f\nkilogram:%lf",m1,m1*0.000001);
+ else if(strcmp(n2,"gram")==0)
+ printf("milligram:%f\ngram",m1,m1*0.001);
+else if(strcmp(n2,"microgram")==0)
+ printf("millgram:%f\nmicrogram:%lf",m1,m1*1000.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("milligram:%f\nquintal",m1,m1*0.00000001);
+ else if(strcmp(n2,"pound")==0)
+ printf("milligram:%f\npound",m1,m1*2.2046226);
+ else if(strcmp(n2,"ounze")==0)
+ printf("milligram:%f\nounze",m1,m1*3.527396);
+ else if(strcmp(n2,"carat")==0)
+ printf("milligram:%f\ncarat",m1,m1*0.005);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"microgram")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("microgram:%f\ntonne:%lf",m1,m1*0.000000000001);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("microgram:%f\nkilogram:%lf",m1,m1*0.000000001);
+ else if(strcmp(n2,"gram")==0)
+ printf("microgram:%f\ngram:%lf",m1,m1*0.000001);
+ else if(strcmp(n2,"milligram")==0)
+ printf("microgram:%f\nmilligram:%lf",m1,m1*0.0001);
+ else if(strcmp(n2,"quintal")==0)
+printf("microgram:%f\nquintal:%lf",m1,m1*0.00000000001);
+ else if(strcmp(n2,"pound")==0)
+ printf("microgram:%f\npound:%lf",m1,m1*2.20462262);
+ else if(strcmp(n2,"ounze")==0)
+ printf("microgram:%f\nounze:%lf",m1,m1*3.52739619);
+ else if(strcmp(n2,"carat")==0)
+ printf("microgram:%f\ncarat:%lf",m1,m1*0.005);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"quintal")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("quintal:%f\ntonne:%lf",m1,m1*0.1);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("quintal:%f\nkilogram:%lf",m1,m1*100.0);
+ else if(strcmp(n2,"gram")==0)
+ printf("quintal:%f\ngram:%lf",m1,m1*1000000.0);
+ else if(strcmp(n2,"milligram")==0)
+ printf("quintal:%f\nmillligram:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"microgram")==0)
+ printf("quintal:%f\nmicrogram:%lf",m1,m1*1000000000.0);
+ else if(strcmp(n2,"pound")==0)
+ printf("quintal:%f\npound:%lf",m1,m1*220.4622);
+else if(strcmp(n2,"ounze")==0)
+ printf("quintal:%f\nounze:%lf",m1,m1*3527.39619);
+ else if(strcmp(n2,"carat")==0)
+ printf("quintal:%f\ncarat:%lf",m1,m1*500000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"pound")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("pound:%f\ntonne:%lf",m1,m1*0.00045359);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("pound:%f\nkilogram:%lf",m1,m1*0.4359237);
+ else if(strcmp(n2,"gram")==0)
+ printf("pound:%f\ngram:%lf",m1,m1*453.59237);
+ else if(strcmp(n2,"milligram")==0)
+ printf("pound:%f\nmilligram:%lf",m1,m1*453592.37);
+ else if(strcmp(n2,"microgram")==0)
+ printf("pound:%f\nmicrogram:%lf",m1,m1*453592370.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("pound:%f\nquintal:%lf",m1,m1*0.0045359);
+ else if(strcmp(n2,"ounze")==0)
+ printf("pound:%f\nounze:%lf",m1,m1*16.0);
+ else if(strcmp(n2,"carat")==0)
+printf("pound:%f\ncarat:%lf",m1,m1*2267.96);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"ounze")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("ounze:%f\ntonne:%lf",m1,m1*2.834952);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("ounze:%f\nkilogram:%lf",m1,m1*0.028349);
+ else if(strcmp(n2,"gram")==0)
+ printf("ounze:%f\ngram:%lf",m1,m1*28.34952);
+ else if(strcmp(n2,"milligram")==0)
+ printf("ounze:%f\nmiligram:%lf",m1,m1*28349.52);
+ else if(strcmp(n2,"microgram")==0)
+ printf("ounze:%f\nmicrgram:%lf",m1,m1*28349523.1);
+ else if(strcmp(n2,"quintal")==0)
+ printf("ounze:%f\nquintal:%lf",m1,m1*0.00028349);
+ else if(strcmp(n2,"pound")==0)
+ printf("ounze:%f\npound:%lf",m1,m1*0.0625);
+ else if(strcmp(n2,"carat")==0)
+ printf("ounze:%f\ncarat:%lf",m1,m1*141.7476);
+ else
+ printf("enter the unit corrrectly");
+}
+ else if(strcmp(n1,"carat")==0){
+ if(strcmp(n2,"tonne")==0)
+ printf("carat:%f\ntonne:%lf",m1,m1*0.0000002);
+ else if(strcmp(n2,"kilogram")==0)
+ printf("carat:%f\nkilogram:%lf",m1,m1*0.0002);
+ else if(strcmp(n2,"gram")==0)
+ printf("carat:%f\ngram:%lf",m1,m1*0.2);
+ else if(strcmp(n2,"milligram")==0)
+ printf("carat:%f\nmilligram:%lf",m1,m1*200.0);
+ else if(strcmp(n2,"microgram")==0)
+ printf("carat:%f\nmicrogram:%lf",m1,m1*200000.0);
+ else if(strcmp(n2,"quintal")==0)
+ printf("carat:%f\nquintal:%lf",m1,m1*0.000002);
+ else if(strcmp(n2,"pound")==0)
+ printf("carat:%f\npound:%lf",m1,m1*0.00044092);
+ else if(strcmp(n2,"ounze")==0)
+ printf("carat:%f\nounze:%lf",m1,m1*0.00705479);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else
+ printf("enter the unit corrrectly");
+}
+ //function for bmi calculator
+ void bmi(){
+ float weight, height;
+ printf("BMI CALCULATOR\n");
+ printf("---------------\n");
+ printf("Enter weight in kilograms: ");
+ scanf("%f", &weight);
+ printf("Enter height in centimeters: ");
+ scanf("%f", &height);
+ height = height / 100.0;
+ float bmi = weight / (height * height);
+ printf("BMI: %.2f\n", bmi);
+ }
+ void time(){
+ printf("TIME CONVERTOR\n");
+ printf("---------------\n");
+ float m1;
+ char n1[50],n2[50];
+ printf("1.hour\n");
+ printf("2.minute\n");
+ printf("3.second\n");
+ printf("4.millisecond\n");
+printf("5.microsecond\n");
+ printf("enter the input unit:");
+ scanf("%s",&n1);
+ strlwr(n1);
+ printf("enter the input value:");
+ scanf("%f",&m1);
+ printf("enter the unit to be converted:");
+ scanf("%s",&n2);
+ strlwr(n2);
+ if(strcmp(n1,n2)==0){
+ printf("both the units are same");}
+ else if(strcmp(n1,"hour")==0){
+ if(strcmp(n2,"minute")==0)
+ printf("hour:%f\nminute:%lf",m1,m1*60.0);
+ else if(strcmp(n2,"second")==0)
+ printf("hour:%f\nsecond:%lf",m1,m1*3600.0);
+ else if(strcmp(n2,"millisecond")==0)
+ printf("hour:%f\nmillisecond:%lf",m1,m1*3600000.0);
+ else if(strcmp(n2,"microsecond")==0)
+ printf("hour:%f\nmicrosecond:%lf",m1,m1*3600000000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+else if(strcmp(n1,"minute")==0){
+ if(strcmp(n2,"hour")==0)
+ printf("minute:%f\nhour:%lf",m1,m1*0.0167);
+ else if(strcmp(n2,"second")==0)
+ printf("minute:%f\nsecond:%lf",m1,m1*60.0);
+ else if(strcmp(n2,"millisecond")==0)
+ printf("minute:%f\nmillisecond:%lf",m1,m1*60000.0);
+ else if(strcmp(n2,"microsecond")==0)
+ printf("minute:%f\nmicrosecond:%lf",m1,m1*60000000000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"second")==0){
+ if(strcmp(n2,"hour")==0)
+ printf("second:%f\nhour:%lf",m1,m1*0.0003);
+ else if(strcmp(n2,"minute")==0)
+ printf("second:%f\nminute:%lf",m1,m1*0.0167);
+ else if(strcmp(n2,"millisecond")==0)
+ printf("second:%f\nmillisecond:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"microsecond")==0)
+ printf("second:%f\nmicrosecond:%lf",m1,m1*1000.0);
+ else
+ printf("enter the unit corrrectly");
+}
+ else if(strcmp(n1,"millisecond")==0){
+ if(strcmp(n2,"hour")==0)
+ printf("millisecond:%f\nhour:%lf",m1,m1*0.0000002778);
+ else if(strcmp(n2,"minute")==0)
+ printf("millisecond:%f\nminute:%lf",m1,m1*0.0000167);
+ else if(strcmp(n2,"second")==0)
+ printf("millisecond:%f\nsecond:%lf",m1,m1*0.001);
+ else if(strcmp(n2,"microsecond")==0)
+ printf("millisecond:%f\nmicrosecond:%lf",m1,m1*1000.0);
+ else
+ printf("enter the unit corrrectly");
+ }
+ else if(strcmp(n1,"microsecond")==0){
+ if(strcmp(n2,"hour")==0)
+ printf("microsecond:%f\nhour:%lf",m1,m1*0.0000000002778);
+ else if(strcmp(n2,"minute")==0)
+ printf("microsecond:%f\nminute:%lf",m1,m1*0.0000000167);
+ else if(strcmp(n2,"second")==0)
+ printf("microsecond:%f\nhour:%lf",m1,m1*0.000001);
+ else if(strcmp(n2,"millisecond")==0)
+ printf("microsecond:%f\nhour:%lf",m1,m1*0.001);
+ else
+printf("enter the unit corrrectly");
+ }
+ else
+ }
+ int main(){
+ int n;
+ printf("enter the unit corrrectly");
+ printf("WELCOME TO CONVERTOR\n");
+ printf("---------------\n");
+ printf("1.LENGTH CONVERTOR\n");
+ printf("2.TMPERATURE CONVERTOR\n");
+ printf("3.MASS CONVERTOR\n");
+ printf("4.TIME CONVERTOR\n");
+ printf("5.BMI CALCULATOR\n");
+ printf("---------------\n");
+ printf("enter the number to open the particular convertor:");
+ scanf("%d",&n);
+ printf("---------------\n");
+ switch(n){
+ case(1):
+ length();
+ break;
+ case(2):
+temp();
+ break;
+ case(3):
+ mass();
+ break;
+ case(4):
+ time();
+ break;
+ case(5):
+ bmi();
+ break;
+ default:
+ printf("the number is invalid");
+ }
+ return 0;
+ }
